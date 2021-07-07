@@ -1,5 +1,5 @@
 <h1>.NET 5.0</h1>
-[Ru documentation]: https://github.com/alcohon/TestCase/blob/master/README_RU_RU.md
+<a href = "https://github.com/alcohon/TestCase/blob/master/README_RU_RU.md">Ru documentation</a>
 <p><b>Console pizza delivery robot</b><br/>
 User guide:
 It's console app that reads data from command line arguments, so that input data should be like, e.g.,
