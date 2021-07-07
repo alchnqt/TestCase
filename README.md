@@ -13,6 +13,11 @@ User guide:<br/>
 2x4 (1, 0)<br/>
 where is 5x5 etc is map size: height x width  <br/>
 and the other are pizza delivery points (x, y) x,y - coordinates<br/>
+  
+  <h3>Exaplme of usage</h3>
+  TestCase.exe 3x4 (1, 3) (2, 3) </br>
+  or just run app and it will ask you to input the string
+  
 Robot can move to any part of the world: East, West, North, South, and Drop pizza to needed point, <br/>
 so output would be like EDEEEDSSEED, where E(East), D(Drop), S(South) resp.<br/>
 Unit-testing included<br/>
