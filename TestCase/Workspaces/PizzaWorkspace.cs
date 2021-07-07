@@ -11,6 +11,10 @@ using TestCase.Services.Implementations;
 
 namespace TestCase.Workspaces
 {
+
+    /// <summary>
+    /// That class separate main logic of pizza delivery, i called it workspace for some reason
+    /// </summary>
     public class PizzaWorkspace : IRouteProccesor
     {
         Map map;
@@ -25,12 +29,17 @@ namespace TestCase.Workspaces
 
             this.pizzaRobot = pizzaRobot;
         }
+
         private static bool ValidatePointInMap(Map map, List<Point> points)
         {
             IPointValidatorService pointValidator = new PointValidatorService();
             return pointValidator.ValidatePointsInMap(map, points);
         }
 
+        /// <summary>
+        /// Main algorithm of moving trough the map
+        /// The first is moving along the x-axis, the second is moving along the y-axis
+        /// </summary>
         public void ProccesRoute()
         {
             Point currentPosition = new(0, 0);

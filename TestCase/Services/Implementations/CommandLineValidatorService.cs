@@ -11,6 +11,11 @@ namespace TestCase.Services.Implementations
     public class CommandLineValidatorService : IStringValidatorService
     {
         private Regex validString = new Regex(@"^\dx\d\s(\(\d,\s\d\)\s*)+$");
+        /// <summary>
+        /// Comparing string from cmd to be valid
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public bool ValidateString(string str) => validString.IsMatch(str);
     }
 }
