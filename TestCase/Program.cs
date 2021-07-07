@@ -16,7 +16,16 @@ namespace TestCase
             try
             {
                 WorkspaceFactory pizzaWorkspaceFactory = new PizzaWorkspaceFactory();
-                IRouteProccesor pizzaWorkspace = pizzaWorkspaceFactory.CreateWorkspace(string.Join(" ", args));
+                IRouteProccesor pizzaWorkspace;
+                if (string.Join(" ", args) == "")
+                {
+                    Console.WriteLine("Input size of map and delivery points: ");
+                    pizzaWorkspace = pizzaWorkspaceFactory.CreateWorkspace(Console.ReadLine());
+                }
+                else
+                {
+                    pizzaWorkspace = pizzaWorkspaceFactory.CreateWorkspace(string.Join(" ", args));
+                }
                 pizzaWorkspace.ProccesRoute();
             }
             catch (Exception e)
